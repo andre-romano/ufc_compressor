@@ -1,3 +1,8 @@
+# package managers
+vcpkg/
+conan*.bat
+deactivate_conan*.bat
+
 # Prerequisites
 build/
 *.d
