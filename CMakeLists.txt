@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project name and version
-project(App VERSION 1.0 LANGUAGES CXX)
+project(ufc_compressor VERSION 1.0 LANGUAGES CXX)
 
 # Set C++ standard (C++17 is required for <filesystem>)
 set(CMAKE_CXX_STANDARD 17)
@@ -20,4 +20,4 @@ include_directories(src)
 file(GLOB_RECURSE SRC_FILES "src/*.cpp")
 
 # Add executable with all .cpp files
-add_executable(App ${SRC_FILES})
+add_executable(ufc_compressor ${SRC_FILES})

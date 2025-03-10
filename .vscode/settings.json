@@ -1,5 +1,12 @@
 {
-    "editor.tabSize": 4,
+    "cmake.automaticReconfigure": false,
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.generator": "Ninja",
+    "cmake.preferredGenerators": [
+        "Ninja",
+        "MinGW Makefiles"
+    ],
     "files.associations": {
         "*.yml": "yaml",
         "*.yaml": "yaml",

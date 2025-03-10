@@ -1,3 +1,3 @@
 @echo off
 
-.\build\App.exe
+.\build\ufc_compressor.exe

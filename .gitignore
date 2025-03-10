@@ -13,21 +13,21 @@ build/
 *.pch
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# *.so
+# *.dylib
+# *.dll
+
+# Compiled Static libraries
+# *.lai
+# *.la
+# *.a
+# *.lib
 
 # Fortran module files
 *.mod
 *.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
 # Executables
-*.exe
+# *.exe
 *.out
 *.app
