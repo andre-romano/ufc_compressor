@@ -1,10 +1,12 @@
 # package managers
-vcpkg/
+external
+vcpkg
 conan*.bat
 deactivate_conan*.bat
+*.cmake
 
 # Prerequisites
-build/
+build
 *.d
 
 # Compiled Object files

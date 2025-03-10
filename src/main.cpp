@@ -1,9 +1,16 @@
 #include <fstream>
 #include <iostream>
 
+#include "argparse/argparse.hpp"
+
 #include "utils/CompressionEstimator.hpp"
 
 int main(int argc, char *argv[]) {
+  argparse::ArgumentParser program("example");
+
+  program.add_argument("-f", "--file").help("Input file").required();
+  program.parse_args(argc, argv);
+
   // Example usage
   std::string filePath = "example.txt"; // Change to any file
   try {

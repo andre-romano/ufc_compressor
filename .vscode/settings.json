@@ -7,6 +7,11 @@
         "Ninja",
         "MinGW Makefiles"
     ],
+    "python.analysis.ignore": [
+        "build/**",
+        "external/**",
+        "include/**",
+    ],
     "C_Cpp.formatting": "clangFormat",
     "C_Cpp.clang_format_path": "C:/Program Files/llvm-mingw-20250305/bin/clang-format.exe",
     "editor.formatOnSave": true,

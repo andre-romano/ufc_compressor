@@ -1,0 +1,18 @@
+#include "argparse/argparse.hpp"
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+  argparse::ArgumentParser program("example");
+
+  program.add_argument("-f", "--file").help("Input file").required();
+  program.add_argument("-o", "--output")
+      .help("Output file")
+      .default_value(std::string("default.txt"));
+
+  program.parse_args(argc, argv);
+
+  std::cout << "File: " << program.get<std::string>("--file") << std::endl;
+  std::cout << "Output: " << program.get<std::string>("--output") << std::endl;
+
+  return 0;
+}

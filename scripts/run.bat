@@ -4,5 +4,5 @@ echo -----------
 echo   Running
 echo -----------
 echo.
-.\build\ufc_compressor.exe "$@"
+.\build\ufc_compressor.exe %*
 echo.

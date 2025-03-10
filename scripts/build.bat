@@ -8,6 +8,7 @@ echo --------------
 echo  Configuring
 echo --------------
 echo.
+
 mkdir build
 cd build
 del /q *.exe
@@ -18,6 +19,7 @@ echo -------------
 echo   Compiling
 echo -------------
 echo.
+
 cmake --build .
 cd ..
 
