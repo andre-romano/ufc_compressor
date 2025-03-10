@@ -12,13 +12,6 @@
             "cacheVariables": {
                 "CMAKE_CXX_COMPILER": "clang++"
             }
-        },
-        {
-            "name": "g++",
-            "generator": "MinGW Makefiles",
-            "cacheVariables": {
-                "CMAKE_CXX_COMPILER": "g++"
-            }
         }
     ]
 }

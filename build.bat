@@ -1,14 +1,25 @@
 @echo off
 
-echo build.bat - Begin
+echo.
+echo build.bat - BEGIN
+echo.
 
-echo Configuring build ...
+echo --------------
+echo  Configuring
+echo --------------
+echo.
 mkdir build
 cd build
+del /q *.exe
 cmake --preset clang++ ..
+echo.
 
-echo Building the package...
+echo -------------
+echo   Compiling
+echo -------------
+echo.
 cmake --build .
 cd ..
 
-echo build.bat - End
+echo.
+echo build.bat - END

@@ -1,7 +1,6 @@
 @echo off
 
 call build.bat
-echo " "
 
-echo " "
+echo.
 call run.bat

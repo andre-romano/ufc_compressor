@@ -1,20 +1,18 @@
 #include <fstream>
 #include <iostream>
 
-#include "CompressionEstimator.hpp"
+#include "utils/CompressionEstimator.hpp"
 
-using CompressionInfo = CompressionEstimator::CompressionInfo;
-
-int main() {
+int main(int argc, char *argv[]) {
   // Example usage
   std::string filePath = "example.txt"; // Change to any file
   try {
     auto estimator = CompressionEstimator(filePath);
-    CompressionInfo result = estimator.estimateCompression();
+    auto result = estimator.estimate_compression();
     std::cout << "File: " << result.file << "\n"
-              << "Original Size: " << result.originalSize << " bytes\n"
-              << "Compression Ratio: " << result.compressionRatio << "\n"
-              << "Estimated Compressed Size: " << result.estimatedCompressedSize
+              << "Original Size: " << result.original_size << " bytes\n"
+              << "Compression Ratio: " << result.compression_ratio << "\n"
+              << "Estimated Compressed Size: " << result.compressed_size
               << " bytes\n";
   } catch (const std::exception &e) {
     std::cerr << "ERROR: " << e.what() << "\n";

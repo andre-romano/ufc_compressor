@@ -14,10 +14,10 @@ class CompressionEstimator {
 public:
   // CompressionInfo struct
   struct CompressionInfo {
-    double compressionRatio;         // between 0.0 - 1.0
-    int64_t estimatedCompressedSize; // in bytes
-    int64_t originalSize;            // in bytes
-    std::string file;                // fileName
+    double compression_ratio; // between 0.0 - 1.0
+    int64_t compressed_size;  // in bytes
+    int64_t original_size;    // in bytes
+    std::string file;         // fileName
   };
 
 public:
@@ -41,10 +41,10 @@ public:
   CompressionEstimator(const std::string &filePath, int sampleSize = 1024);
 
   // estimate file compression size
-  CompressionInfo estimateCompression();
+  CompressionInfo estimate_compression();
 
 private:
-  double estimateEntropy();
+  double estimate_entropy();
 
 private:
   std::string filePath;

@@ -16,7 +16,7 @@ CompressionEstimator::CompressionEstimator(const std::string &filePath,
 
 // estimateCompression estimates the compressed file size based on file type and
 // entropy
-CompressionInfo CompressionEstimator::estimateCompression() {
+CompressionInfo CompressionEstimator::estimate_compression() {
   CompressionInfo compressionInfo;
   compressionInfo.file = filePath;
 
@@ -24,7 +24,7 @@ CompressionInfo CompressionEstimator::estimateCompression() {
   if (!fs::exists(filePath)) {
     throw std::runtime_error("file does not exist: " + filePath);
   }
-  compressionInfo.originalSize = fs::file_size(filePath);
+  compressionInfo.original_size = fs::file_size(filePath);
 
   // Retrieve the compression ratio from the map
   std::string extension = fs::path(filePath).extension().string();
@@ -36,13 +36,13 @@ CompressionInfo CompressionEstimator::estimateCompression() {
   }
 
   // Adjust based on entropy
-  double entropy = estimateEntropy();
+  double entropy = this->estimate_entropy();
   double entropyFactor = (1 - entropy) * 0.5 + 0.5; // Scale between 0.5 to 1
-  compressionInfo.compressionRatio = compressionRatio * entropyFactor;
+  compressionInfo.compression_ratio = compressionRatio * entropyFactor;
 
   // Estimated compressed size
-  compressionInfo.estimatedCompressedSize = static_cast<int64_t>(
-      compressionInfo.originalSize * compressionInfo.compressionRatio);
+  compressionInfo.compressed_size = static_cast<int64_t>(
+      compressionInfo.original_size * compressionInfo.compression_ratio);
 
   return compressionInfo;
 }
@@ -52,7 +52,7 @@ CompressionInfo CompressionEstimator::estimateCompression() {
  ****************/
 
 // estimateEntropy calculates the entropy of a file using a small sample
-double CompressionEstimator::estimateEntropy() {
+double CompressionEstimator::estimate_entropy() {
   std::ifstream file(this->filePath, std::ios::binary);
   if (!file) {
     throw std::runtime_error("failed to open file: " + filePath);

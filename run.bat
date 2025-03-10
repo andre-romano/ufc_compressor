@@ -1,3 +1,8 @@
 @echo off
 
-.\build\ufc_compressor.exe
+echo -----------
+echo   Running
+echo -----------
+echo.
+.\build\ufc_compressor.exe "$@"
+echo.
