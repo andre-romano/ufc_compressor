@@ -26,7 +26,6 @@ Check [GitHub Releases](https://github.com/andre-romano/ufc_compressor/releases)
 ## Build Dependencies
 
 To build this project, you will need the most current stable versions of:
-- Python 3 (for Conan dependency manager)
 - [``Clang-MinGW-64``](https://www.mingw-w64.org/downloads/) or Clang-Linux compiler
 - [`CMake`](https://cmake.org/download/) build system
 - [`Ninja`](https://github.com/ninja-build/ninja/releases/) build tool 
@@ -39,9 +38,8 @@ Compiler must support at least `c++17` standard.
 Run the CMD script:
 
 ```batch
-call ./install_dependencies.bat
-call ./config.bat
-call ./build.bat
+call .\scripts\install_dependencies.bat
+call .\scripts\build.bat
 ```
 
 ## Contributing
